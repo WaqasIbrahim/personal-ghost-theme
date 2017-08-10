@@ -1,6 +1,6 @@
 {
 	"name": "personal",
-	"description": "My personal blogging theme.",
+	"description": "A light and minimal blogging theme for Ghost.",
 	"demo": "https://waqasibrahim.com",
 	"version": "1.0.0",
 	"engines": {
@@ -18,9 +18,9 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/WaqasIbrahim/personal-blog-theme.git"
+		"url": "https://github.com/WaqasIbrahim/personal-ghost-theme.git"
 	},
-	"bugs": "https://github.com/WaqasIbrahim/personal-blog-theme/issues",
+	"bugs": "https://github.com/WaqasIbrahim/personal-ghost-theme/issues",
 	"devDependencies": {
 		"gulp": "3.9.1",
 		"gulp-autoprefixer": "4.0.0",
