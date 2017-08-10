@@ -1,0 +1,16 @@
+.button {
+	display: inline-block;
+	border: 0;
+	color: #fff;
+	text-transform: uppercase;
+	padding: ($golden-major * 1em) ($phi * 1em);
+	letter-spacing: 1px;
+	font-weight: 300;
+	background-color: $brand-color;
+	cursor: pointer;
+	
+	&:hover {
+		color: #fff;
+		background-color: $brand-dark-color;
+	}
+}

@@ -1,0 +1,110 @@
+.site-header {
+	width: 100%;
+	max-width: 83.236rem;
+	max-width: calc(80rem + (2 * #{$phi}));
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	padding: (step-phi(2) * 1rem) ($phi * 1rem);
+
+	@media only screen and (max-width: $max-width) {
+		padding: ($phi * 1rem);
+	}
+}
+
+.brand,
+#nav-toggle {
+	position: relative;
+	z-index: 100;
+}
+
+.brand {
+	h1,
+	a {
+		display: block;
+		margin: 0;
+		font-size: 1.5rem;
+		color: $headings-color;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+	.logo {
+		height: 3rem;
+		width: auto;
+	}
+}
+
+#nav-toggle {
+	margin-left: auto;
+
+	@media screen and (min-width: $nav-breakpoint) {
+		display: none;
+	}
+}
+
+.nav {
+	margin-left: auto;
+
+	ul {
+		list-style: none;
+
+		li {
+			display: inline-block;
+			margin-left: $phi * 1em;
+			
+			a {
+				color: $text-color;
+				text-transform: uppercase;
+				font-weight: 300;
+				letter-spacing: 1px;
+
+				&:hover {
+					color: $brand-color;
+				}
+			}
+
+			&.current {
+				a {
+					color: $brand-color;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: $nav-breakpoint) {
+		display: none;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 99;
+		background: #fff;
+		overflow-y: auto;
+
+		ul {
+			padding-top: (3rem + (step-phi(2) * 2rem));
+			padding-right: ($phi * 1rem);
+
+			li {
+				display: block;
+				margin-left: 0;				
+				text-align: right;
+				
+				a {
+					font-size: 2em;
+					margin-bottom: ($phi * 1em);
+				}
+			}
+		}
+	}
+}
+
+.nav-open {
+	overflow: hidden;
+
+	.nav {
+		display: block;
+	}
+}

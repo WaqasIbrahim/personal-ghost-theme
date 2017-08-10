@@ -1,0 +1,31 @@
+{{!< default}}
+
+{{#author}}
+<section class="banner {{#if cover_image}}cover" style="background-image: url({{cover_image}}){{/if}}">
+	<div class="container">
+		{{#if profile_image}}
+			<img src="{{profile_image}}" alt="{{name}}" />
+		{{/if}}
+		<h1>{{name}}</h1>
+		{{#if bio}}
+			<h2>{{bio}}</h2>
+		{{/if}}
+		<ul>
+			{{#if website}}
+				<li><a href="{{website}}" target="_blank">Website</a></li>
+			{{/if}}
+			{{#if twitter}}
+				<li><a href="{{twitter_url}}" target="_blank">Twitter</a></li>
+			{{/if}}
+			{{#if facebook}}
+				<li><a href="{{facebook_url}}" target="_blank">Facebook</a></li>
+			{{/if}}
+			<li><a href="http://cloud.feedly.com/#subscription/feed/{{url absolute="true"}}/rss/" target="_blank">RSS</a></li>
+		</ul>
+	</div>
+</section>
+{{/author}}
+
+<section class="posts container">
+	{{> "loop"}}
+</section>

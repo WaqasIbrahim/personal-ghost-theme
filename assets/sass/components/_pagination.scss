@@ -1,0 +1,38 @@
+.pagination {
+	text-align: center;
+	position: relative;
+	
+	a {
+		color: $text-color;
+		border: 0;
+		text-transform: uppercase;
+		font-weight: 300;
+		letter-spacing: 1px;
+		
+		&:hover {
+			color: $brand-color;
+		}
+	}
+
+	@media only screen and (max-width: $max-width) {
+		padding-bottom: ($phi * 1rem);
+	}
+}
+
+.older-posts,
+.newer-posts {
+	position: absolute;
+	top: 0;
+
+	@media only screen and (max-width: $max-width) {
+		top: ($phi * 1rem);
+	}
+}
+
+.older-posts {
+	right: 0;
+}
+
+.newer-posts {
+	left: 0;
+}

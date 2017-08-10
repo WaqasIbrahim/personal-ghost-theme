@@ -1,0 +1,8 @@
+// -----------------------------------------------------------------------------
+// Chrome android fixed position scroll bug fix
+// -----------------------------------------------------------------------------
+.nav {
+	@media screen and (max-width: $nav-breakpoint) {
+		-webkit-transform: translateZ(0);
+	}
+}

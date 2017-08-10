@@ -1,0 +1,21 @@
+{{! complete}}
+{{!< default}}
+
+{{#tag}}
+<section class="banner {{#if feature_image}}cover" style="background-image: url({{feature_image}}){{/if}}">
+	<div class="container">
+		<h1>{{name}}</h1>
+		<h2>
+			{{#if description}}
+				{{description}}
+			{{else}}
+				A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
+			{{/if}}
+		</h2>
+	</div>
+</section>
+{{/tag}}
+
+<section class="posts container">
+	{{> "loop"}}
+</section>

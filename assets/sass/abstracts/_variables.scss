@@ -1,0 +1,76 @@
+// -----------------------------------------------------------------------------
+// Golden Ratio Constants
+// -----------------------------------------------------------------------------
+
+/// @type Number
+$phi: 1.618;
+
+/// @type Number
+$golden-major: 0.618;
+
+/// @type Number
+$golden-minor: 0.382;
+
+// -----------------------------------------------------------------------------
+// Fonts
+// -----------------------------------------------------------------------------
+
+/// Native fonts stack borrowed from Bootstrap 4
+/// @type List
+$fallback-font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !default;
+
+/// Text font family
+/// @type List
+$text-font-stack: 'Open Sans', $fallback-font-stack !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
+
+
+// -----------------------------------------------------------------------------
+// Colors
+// -----------------------------------------------------------------------------
+
+/// Text color
+/// @type Color
+$text-color: #4a4a4a !default;
+
+/// Headings color
+/// @type Color
+$headings-color: #333 !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: #466DB2 !default;
+
+/// Dark brand color
+/// @type Color
+$brand-dark-color: #2D5499 !default;
+
+
+// -----------------------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------------------
+
+/// Heading sizes
+/// @type List
+$heading-sizes: (2.5, 2, 1.75, 1.5, 1.25, 1);
+
+
+// -----------------------------------------------------------------------------
+// Layout
+// -----------------------------------------------------------------------------
+
+/// Container's maximum width
+/// @type Length
+$max-width: 768px !default;
+
+
+// -----------------------------------------------------------------------------
+// Breakpoints
+// -----------------------------------------------------------------------------
+
+/// Navigation breakpoint
+/// @type Length
+$nav-breakpoint: 768px !default;

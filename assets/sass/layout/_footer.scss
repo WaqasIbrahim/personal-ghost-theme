@@ -1,0 +1,16 @@
+.site-footer {
+	padding-bottom: ($phi * 1rem);	
+}
+
+.copyrights,
+.powered-by {
+	margin: 0;
+	font-size: 0.875em;
+	text-align: center;
+	color: #999;
+
+	a {
+		color: #999;
+		font-weight: 400;
+	}
+}
