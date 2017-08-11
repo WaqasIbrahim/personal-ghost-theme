@@ -1,14 +1,14 @@
 .pagination {
 	text-align: center;
 	position: relative;
-	
+
 	a {
 		color: $text-color;
 		border: 0;
 		text-transform: uppercase;
 		font-weight: 300;
 		letter-spacing: 1px;
-		
+
 		&:hover {
 			color: $brand-color;
 		}

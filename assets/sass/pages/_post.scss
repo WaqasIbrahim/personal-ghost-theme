@@ -63,14 +63,15 @@
 			font-weight: 700;
 		}
 
-		ul, ol {
+		ul,
+		ol {
 			margin: 0 1.875em 1.875em;
-			line-height: 1.7em
+			line-height: 1.7em;
 		}
 
 		blockquote {
 			position: relative;
-			
+
 			p {
 				font-size: 1.375em;
 				font-style: italic;
@@ -78,7 +79,7 @@
 				color: #777;
 			}
 
-			&:before {
+			&::before {
 				content: '';
 				position: absolute;
 				top: -1rem;
@@ -96,7 +97,7 @@
 					font-size: 1.125em;
 				}
 
-				&:before {
+				&::before {
 					width: 3rem;
 					height: 3rem;
 					left: -1.5rem;
@@ -105,7 +106,7 @@
 		}
 
 		mark {
-			background: #FFF9C4;
+			background: #fff9c4;
 		}
 
 		code {
@@ -151,13 +152,16 @@
 			padding: 0;
 			overflow: hidden;
 
-			&:before {
+			&::before {
 				content: '';
 				display: block;
 				padding-top: 56.25%;
 			}
 
-			embed, iframe, object, video {
+			embed,
+			iframe,
+			object,
+			video {
 				position: absolute;
 				top: 0;
 				bottom: 0;

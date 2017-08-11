@@ -14,8 +14,13 @@ p {
 	margin-bottom: 1.3em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	margin: 1.414em 0 0.5em 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 1.414em 0 0.5em;
 	line-height: 1.2;
 	font-weight: 700;
 	color: $headings-color;
@@ -36,7 +41,7 @@ a {
 	text-decoration: none;
 	color: $brand-color;
 	display: inline-block;
-	
+
 	&:focus,
 	&:active {
 		outline: 1px dotted #bbb; // Keyboard navigation

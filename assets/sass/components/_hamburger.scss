@@ -4,7 +4,8 @@
 	position: relative;
 	display: block;
 
-	&:focus, &:active {
+	&:focus,
+	&:active {
 		outline: 0;
 	}
 
@@ -18,15 +19,15 @@
 		transition: all 0.4s;
 
 		&.line-1 {
-			top:0;
+			top: 0;
 		}
 
 		&.line-2 {
-			top:50%;
+			top: 50%;
 		}
 
 		&.line-3 {
-			top:100%;
+			top: 100%;
 		}
 	}
 
@@ -34,11 +35,11 @@
 		.line-1 {
 			transform: translateY(0.625rem) rotate(45deg);
 		}
-		
+
 		.line-2 {
-			opacity:0;
+			opacity: 0;
 		}
-		
+
 		.line-3 {
 			transform: translateY(-0.625rem) rotate(-45deg);
 		}
