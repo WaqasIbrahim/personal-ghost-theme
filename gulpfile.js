@@ -1,7 +1,7 @@
 var gulp 	= require('gulp'),
 plugins = require('gulp-load-plugins')();
 
-gulp.task('sass', function () {
+gulp.task('sass', function() {
 	return gulp.src('assets/sass/main.scss')
 		.pipe(plugins.plumber({
 			errorHandler: function(error) {
@@ -19,7 +19,19 @@ gulp.task('sass', function () {
 		.pipe(plugins.livereload());
 });
 
-gulp.task('sass:watch', function() {
+gulp.task('js', function() {
+	gulp.src('assets/js/main.js')
+	.pipe(plugins.minify({
+		ext:{
+			min:'.min.js'
+		}
+	}))
+	.pipe(gulp.dest('assets/js/'))
+	.pipe(plugins.livereload());
+});
+
+gulp.task('watch', function() {
 	plugins.livereload.listen();
 	gulp.watch('assets/sass/**/*.scss', ['sass']);
+	gulp.watch('assets/js/main.js', ['js']);
 });
