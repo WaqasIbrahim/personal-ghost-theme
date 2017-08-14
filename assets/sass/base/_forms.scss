@@ -1,0 +1,36 @@
+label {
+	display: table;
+	padding: 0.25em 0;
+}
+
+input {
+	line-height: inherit;
+	font-family: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	width: 100%;
+	max-width: 24rem;
+	border: 1px solid #ddd;
+	padding: ($golden-minor * 1em) ($golden-major * 1em);
+	border-radius: 2px;
+
+	&:focus {
+		outline: 0;
+		border-color: lighten($brand-color, 20);
+	}
+}
+
+textarea {
+	max-width: 100%;
+}
+
+input[type="submit"] {
+	&:focus,
+	&:active {
+		outline: 0;
+	}
+}
