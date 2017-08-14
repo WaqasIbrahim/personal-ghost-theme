@@ -1,22 +1,23 @@
 var gulp 	= require('gulp'),
-plugins = require('gulp-load-plugins')();
+plugins = require('gulp-load-plugins')(),
+production = !!plugins.util.env.production;
 
 gulp.task('sass', function() {
 	return gulp.src('assets/sass/main.scss')
-		.pipe(plugins.plumber({
+		.pipe(production ? plugins.util.noop() : plugins.plumber({
 			errorHandler: function(error) {
 				plugins.notify.onError({
 					title: "Error in " + error.plugin,
 				})(error);
 			}
 		}))
-		.pipe(plugins.sourcemaps.init())
+		.pipe(production ? plugins.util.noop() : plugins.sourcemaps.init())
 		.pipe(plugins.sass())
 		.pipe(plugins.autoprefixer())
 		.pipe(plugins.cssnano())
-		.pipe(plugins.sourcemaps.write())
+		.pipe(production ? plugins.util.noop() : plugins.sourcemaps.write())
 		.pipe(gulp.dest('assets/css/'))
-		.pipe(plugins.livereload());
+		.pipe(production ? plugins.util.noop() : plugins.livereload());
 });
 
 gulp.task('js', function() {
@@ -27,7 +28,7 @@ gulp.task('js', function() {
 		}
 	}))
 	.pipe(gulp.dest('assets/js/'))
-	.pipe(plugins.livereload());
+	.pipe(production ? plugins.util.noop() : plugins.livereload());
 });
 
 gulp.task('watch', function() {
