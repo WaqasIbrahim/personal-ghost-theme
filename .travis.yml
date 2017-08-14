@@ -1,0 +1,24 @@
+branches:
+  only:
+  - /^v\d{1,2}\.\d{1,2}\.\d{1,2}$/
+language: node_js
+node_js: '6'
+before_script:
+  - npm install -g gulp-cli
+  - npm install
+script:
+  - gulp sass --production
+  - gulp js --production
+before_deploy:
+  - rsync -av --progress ./ personal --exclude-from=production-exclude.lst
+  - zip -9 -r theme.zip personal && rm -r personal
+deploy:
+  provider: releases
+  api_key:
+    secure: S4Pw1604CEhpw9XFV7gCtr1STCQAKIpClJEezuWoQi/Lw2UDxfs/bQDrI0DDK+eo1qwMu2bn7q5ZPOYmll0zvN3ZqHWWX+HBcF/3C/fu8libj8oudoqGLvf1PF00HqzA0/uPzFUQ7GtCel5SonYTucMyF5GwLCAqbw7DgKHlFEYZDzwSsC11YaV5+gZA1OwU7B1brCFQ8AGmUlURVUVsZrXmtFesquIxmjUVaG86Qu6dMTVyuPhtwCgBGVGkS0XVzT5/xVxpp0hE3gv4ngR7oWnGS20cKCqE88D4JpPzTQ6wseFFn0jZTW0iC5vU87hZEBxMc+uQjzv403ximCkurfEDhGRMEMtWBUOTNQTYOiL+a7oA3OkvKweZE1MkBDMZRwQYdKKiFqryOrwI3iIPtBhtxmuKJzJ+00qEv+8GgSAaTGGruqXoHSquTAoJolRBtQMOLnQWBDmNj6vykSfS2fTI1Q0buOexz584IB20erYfeoTBTRwQkKE3NGREDuxrBnvVT2pI4qesrJOYB9Jz1ga4ywQZnaPzK2AaUUGEEaAyTPHiD+axnB7hHiFoepWCInOitxPsCYSKROiShnFH2m+OH9gqjdujintxrAu6M6VsznIiDb5nR13N6kGdsMyp8yOsu39uSR5W3MOEja5SEJBzocFo2+S4V+y0RjfpcVc=
+  file: theme.zip
+  on:
+    repo: WaqasIbrahim/personal-ghost-theme
+    branch: master
+    tags: true
+  skip_cleanup: true

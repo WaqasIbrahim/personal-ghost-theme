@@ -1,0 +1,14 @@
+# Exclude these directories and files from production releases
+
+.git
+node_modules
+assets/sass
+assets/js/main.js
+
+.editorconfig
+.gitignore
+.travis.yml
+gulpfile.js
+package-lock.json
+production-exclude.lst
+README.md
