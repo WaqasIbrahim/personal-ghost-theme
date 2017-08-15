@@ -12,13 +12,22 @@
 * Author and tag pages with covers
 * Code highlighting using [PrismJS](https://github.com/PrismJS/prism)
 * On demand Disqus comments (Loads on button click)
+* Contact form using [Formspree](https://github.com/formspree/formspree)
 * Social sharing for posts
 * Responsive embeds
 
 ## Installation
-1. Download theme.zip file from latest release.
-1. Open `post.hbs` and replace `test-apkdzgmqhj` with your own Disqus site-id.
-1. Go to your ghost admin panel > Design and upload theme.zip file.
+Download theme.zip file from latest release.
+
+### Disqus comments
+Open `post.hbs` in a text editor and replace `test-apkdzgmqhj` with your own Disqus site-id.
+
+### Contact form
+1. Open `page-contact.hbs` in a a text editor and replace `your@email.com` with your own email address.
+1. After uploading the theme create a new page with URL `contact`.
+1. Visit the page and submit the form with dummy data, you will receive a verification email.
+
+Read more here: [https://formspree.io/](https://formspree.io/)
 
 ## Usage
 ### Responsive embeds
@@ -39,10 +48,11 @@ The embeds will be contained within a container, if you want a full width embed 
 Add `#full` at the end of your image links to make them full width.
 
 
- ## Credits
- * [Casper](https://github.com/TryGhost/casper)
- * [Sass Boilerplate](https://github.com/HugoGiraudel/sass-boilerplate)
- * [PrismJS](https://github.com/PrismJS/prism)
+## Credits
+* [Casper](https://github.com/TryGhost/casper)
+* [Sass Boilerplate](https://github.com/HugoGiraudel/sass-boilerplate)
+* [PrismJS](https://github.com/PrismJS/prism)
+* [Formspree](https://github.com/formspree/formspree)
 
 ## License
 This theme is licensed under the MIT License.
