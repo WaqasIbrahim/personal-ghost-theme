@@ -1,5 +1,5 @@
 # Personal Ghost Theme
- A light and minimal blogging theme for Ghost. [Demo website](https://waqasibrahim.com)
+ A light and minimal blogging theme for Ghost. [Demo website](https://demo.waqasibrahim.com/personal/)
 
 ![screenshot-desktop](https://user-images.githubusercontent.com/12554146/29203246-053bb03c-7e89-11e7-9ac2-2cccb4842308.png)
 
