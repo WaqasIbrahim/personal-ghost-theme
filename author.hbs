@@ -4,7 +4,7 @@
 <section class="banner {{#if cover_image}}cover" style="background-image: url({{cover_image}}){{/if}}">
 	<div class="container">
 		{{#if profile_image}}
-			<img src="{{profile_image}}" alt="{{name}}" />
+			<img src="{{profile_image}}" alt="{{name}}">
 		{{/if}}
 		<h1>{{name}}</h1>
 		{{#if bio}}
@@ -27,5 +27,5 @@
 {{/author}}
 
 <section class="posts container">
-	{{> "loop"}}
+	{{> loop}}
 </section>

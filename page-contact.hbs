@@ -1,39 +1,38 @@
 {{!< default}}
+
 {{#post}}
-	<article class="single-post page page-contact {{post_class}}">
-		<div class="container">
-			<header>
-				<h1 class="title">{{title}}</h1>
-			</header>
+<div class="{{post_class}} container">
+	<header>
+		<h1 class="title">{{title}}</h1>
+	</header>
 
-			<section class="content">
-				{{content}}
-			</section>
+	<section class="content">
+		{{content}}
+	</section>
 
-			<section class="contact-forn">
-				<form action="https://formspree.io/your@email.com" method="POST">
-					<p>
-						<label for="name">Your Name</label>
-						<input type="text" name="name" id="name" required maxlength="120">
-					</p>
-					<p>
-						<label for="email">Your Email</label>
-						<input type="email" name="email" id="email" required maxlength="120">
-					</p>
-					<p>
-						<label for="phone">Your Phone <small>(Optional)</small></label>
-						<input type="tel" name="phone" id="phone" maxlength="24">
-					</p>
-					<p>
-						<label for="message">Your Message</label>
-						<textarea name="message" id="message" rows="8" required maxlength="1200"></textarea>
-					</p>
-					<p>
-						<input type="text" name="_gotcha" style="display:none">
-						<input type="submit" class="button" value="Send message">
-					</p>
-				</form>
-			</section>
-		</div>
-	</article>
+	<section class="contact-forn">
+		<form action="https://formspree.io/your@email.com" method="POST">
+			<p>
+				<label for="name">Your Name</label>
+				<input type="text" name="name" id="name" required maxlength="120">
+			</p>
+			<p>
+				<label for="email">Your Email</label>
+				<input type="email" name="_replyto" id="email" required maxlength="120">
+			</p>
+			<p>
+				<label for="phone">Your Phone <small>(Optional)</small></label>
+				<input type="tel" name="phone" id="phone" maxlength="24">
+			</p>
+			<p>
+				<label for="message">Your Message</label>
+				<textarea name="message" id="message" rows="8" required maxlength="1200"></textarea>
+			</p>
+			<p>
+				<input type="text" name="_gotcha" style="display:none">
+				<input type="submit" class="button" value="Send message">
+			</p>
+		</form>
+	</section>
+</div>
 {{/post}}

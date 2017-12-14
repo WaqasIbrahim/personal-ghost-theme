@@ -1,7 +1,9 @@
-<nav class="nav">
+<nav class="site-nav">
 	<ul>
 		{{#foreach navigation}}
-		<li{{#if current}} class="current"{{/if}}><a href="{{url absolute="true"}}">{{label}}</a></li>
+		<li{{#if current}} class="current"{{/if}}>
+			<a href="{{url absolute="true"}}">{{label}}</a>
+		</li>
 		{{/foreach}}
 	</ul>
 </nav>

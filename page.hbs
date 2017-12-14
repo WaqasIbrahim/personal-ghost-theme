@@ -1,23 +1,21 @@
 {{!< default }}
 
 {{#post}}
-	<article class="single-post page {{post_class}}">
-		<div class="container">
-			{{#if feature_image}}
-			<figure class="feature-image">
-				<img src="{{feature_image}}" alt="{{title}}">
-			</figure>
-			{{/if}}
-		
-			<header>
-				<h1 class="title">{{title}}</h1>
-			</header>			
+<article class="{{post_class}} container">
+	{{#if feature_image}}
+	<figure class="feature-image">
+		<img src="{{feature_image}}" alt="{{title}}">
+	</figure>
+	{{/if}}
 
-			<section class="content">
-				{{content}}
-			</section>
-		</div>
-	</article>
+	<header>
+		<h1 class="title">{{title}}</h1>
+	</header>
+
+	<section class="content">
+		{{content}}
+	</section>
+</article>
 {{/post}}
 
 {{#contentFor "scripts"}}
