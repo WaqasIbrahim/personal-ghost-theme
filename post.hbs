@@ -1,53 +1,55 @@
 {{!< default }}
 
 {{#post}}
-<article class="{{post_class}} container">
-	{{#if feature_image}}
-	<figure class="feature-image">
-		<img src="{{feature_image}}" alt="{{title}}">
-	</figure>
-	{{/if}}
+<article class="{{post_class}}">
+	<div class="container">
+		{{#if feature_image}}
+		<figure class="feature-image">
+			<img src="{{feature_image}}" alt="{{title}}">
+		</figure>
+		{{/if}}
 
-	<header>
-		<h1 class="title">{{title}}</h1>
-		<p class="meta">Posted by
-			{{#if author.profile_image}}
-				<img src="{{author.profile_image}}" alt="{{author.name}}" nopin="nopin">
-			{{/if}}
-			{{author}}
-			on <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
-			{{#if tags}}
-				in {{tags}}
-			{{/if}}
-		</p>
-	</header>
-
-	<section class="content">
-		{{content}}
-	</section>
-
-	<footer>
-		<section class="share">
-			<a class="icon social-share" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}">
-				{{> icons/facebook}}
-				<span class="visually-hidden">Facebook</span>
-			</a>
-			<a class="icon social-share" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}">
-				{{> icons/twitter}}
-				<span class="visually-hidden">Twitter</span>
-			</a>
-			<a class="icon social-share" href="https://plus.google.com/share?url={{url absolute="true"}}">
-				{{> icons/google-plus}}
-				<span class="visually-hidden">Google+</span>
-			</a>
-		</section>
-		<section class="comments">
-			<p class="load-comments">
-				<a href="#" class="button" id="load-comments">Load comments</a>
+		<header>
+			<h1 class="title">{{title}}</h1>
+			<p class="meta">Posted by
+				{{#if author.profile_image}}
+					<img src="{{author.profile_image}}" alt="{{author.name}}" nopin="nopin">
+				{{/if}}
+				{{author}}
+				on <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+				{{#if tags}}
+					in {{tags}}
+				{{/if}}
 			</p>
-			<div id="disqus_thread"></div>
+		</header>
+
+		<section class="content">
+			{{content}}
 		</section>
-	</footer>
+
+		<footer>
+			<section class="share">
+				<a class="icon social-share" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}">
+					{{> icons/facebook}}
+					<span class="visually-hidden">Facebook</span>
+				</a>
+				<a class="icon social-share" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}">
+					{{> icons/twitter}}
+					<span class="visually-hidden">Twitter</span>
+				</a>
+				<a class="icon social-share" href="https://plus.google.com/share?url={{url absolute="true"}}">
+					{{> icons/google-plus}}
+					<span class="visually-hidden">Google+</span>
+				</a>
+			</section>
+			<section class="comments">
+				<p class="load-comments">
+					<a href="#" class="button" id="load-comments">Load comments</a>
+				</p>
+				<div id="disqus_thread"></div>
+			</section>
+		</footer>
+	</div>
 </article>
 {{/post}}
 

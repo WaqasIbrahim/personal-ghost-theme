@@ -1,20 +1,22 @@
 {{!< default }}
 
 {{#post}}
-<article class="{{post_class}} container">
-	{{#if feature_image}}
-	<figure class="feature-image">
-		<img src="{{feature_image}}" alt="{{title}}">
-	</figure>
-	{{/if}}
+<article class="{{post_class}}">
+	<div class="container">
+		{{#if feature_image}}
+		<figure class="feature-image">
+			<img src="{{feature_image}}" alt="{{title}}">
+		</figure>
+		{{/if}}
 
-	<header>
-		<h1 class="title">{{title}}</h1>
-	</header>
+		<header>
+			<h1 class="title">{{title}}</h1>
+		</header>
 
-	<section class="content">
-		{{content}}
-	</section>
+		<section class="content">
+			{{content}}
+		</section>
+	</div>
 </article>
 {{/post}}
 
