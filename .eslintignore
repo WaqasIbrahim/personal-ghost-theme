@@ -1,0 +1,3 @@
+gulpfile.js
+/assets/js/vendor/*
+/assets/js/**/*.min.js
