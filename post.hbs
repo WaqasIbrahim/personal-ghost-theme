@@ -46,6 +46,7 @@
 				<p class="load-comments">
 					<a href="#" class="button" id="load-comments">Load comments</a>
 				</p>
+
 				<div id="disqus_thread"></div>
 			</section>
 		</footer>
@@ -73,7 +74,7 @@
 			s.setAttribute('data-timestamp', +new Date());
 			(d.head || d.body).appendChild(s);
 
-			this.classList.add('visually-hidden');
+			this.style.display = 'none';
 		}, false);
 
 	})();

@@ -1,16 +1,37 @@
 .site-footer {
+	display: flex;
+	flex-wrap: wrap;
 	padding-bottom: ($phi * 1rem);
 }
 
 .copyrights,
 .powered-by {
+	flex-basis: 50%;
 	margin: 0;
 	font-size: 0.875em;
-	text-align: center;
+	text-align: left;
 	color: #999;
 
 	a {
 		color: #999;
-		font-weight: 400;
+		font-weight: 700;
+
+		&:hover {
+			color: $brand-color;
+		}
+	}
+
+	@media only screen and (max-width: 30rem) {
+		flex-basis: 100%;
+		text-align: center;
+	}
+}
+
+.powered-by {
+	margin-left: auto;
+	text-align: right;
+
+	@media only screen and (max-width: 30rem) {
+		text-align: center;
 	}
 }

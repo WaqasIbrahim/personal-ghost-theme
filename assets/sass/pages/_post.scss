@@ -42,6 +42,11 @@
 
 		a {
 			color: $text-color;
+
+			&:hover {
+				color: $brand-color;
+				text-decoration: underline;
+			}
 		}
 
 		img {

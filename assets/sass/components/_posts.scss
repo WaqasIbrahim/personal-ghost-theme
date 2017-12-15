@@ -10,6 +10,11 @@
 				color: $text-color;
 				font-size: 1.125em;
 				font-style: italic;
+
+				&:hover {
+					color: $brand-color;
+					text-decoration: underline;
+				}
 			}
 		}
 
@@ -30,6 +35,11 @@
 		.meta {
 			a {
 				color: $text-color;
+
+				&:hover {
+					color: $brand-color;
+					text-decoration: underline;
+				}
 			}
 
 			img {

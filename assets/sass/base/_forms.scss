@@ -8,9 +8,9 @@ input {
 	font-family: inherit;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
+[type="text"],
+[type="email"],
+[type="tel"],
 textarea {
 	width: 100%;
 	max-width: 24rem;
@@ -26,9 +26,10 @@ textarea {
 
 textarea {
 	max-width: 100%;
+	min-height: 8rem;
 }
 
-input[type="submit"] {
+[type="submit"] {
 	&:focus,
 	&:active {
 		outline: 0;

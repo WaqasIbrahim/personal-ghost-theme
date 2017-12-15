@@ -8,6 +8,10 @@ body {
 	font-weight: 400;
 	line-height: $phi * 1em;
 	color: $text-color;
+
+	@media screen and (max-width: 60rem) {
+		font-size: 0.875em;
+	}
 }
 
 p {
@@ -51,4 +55,9 @@ a {
 		outline: 0;
 		color: $brand-dark-color;
 	}
+}
+
+code,
+pre {
+	font-family: $code-font-stack;
 }
